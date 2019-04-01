@@ -10,11 +10,11 @@ RED='\033[01;31m'
 function show-help() {
     echo "Method requires 2 input parameters. This 2 strings are compared to each other. If string is a valid path to a file, the content of the file will be compared."
     echo
-    echo "Usaage"
+    echo "Usage"
     echo "------"
-    echo -e "diff ${BOLD}--system-diff${NONE} [OPTIONS] file1|string1 file2|string2"
-    echo "where -x -y -z stand for options supported by system diff"
-    
+    echo -e "diff [OPTIONS] file1|string1 file2|string2"
+    echo "where [OPTIONS] stand for options supported by git diff"
+    echo
     echo "Examples"
     echo "------"
     echo "diff string1 string2"
@@ -24,12 +24,17 @@ function show-help() {
     echo
     echo
     echo "This diff implementation uses git-diff in combination with diff-highlighting. If you for whatever reason prefer the old system diff implementation"
-    echo -e "you can easily fall back by using ${BOLD}--system-diff${NONE} parameter."
+    echo -e "you can easily fall back by using ${BOLD}--system-diff${NONE} parameter. Then, of course string comparison is not possible anymore"
+    echo
+    echo "Usage"
+    echo "------"
+    echo -e "diff ${BOLD}--system-diff${NONE} [OPTIONS] file1 file2"
+    echo "where [OPTIONS] stand for options supported by system diff"
     echo
     echo "Examples"
     echo "------"
-    echo -e "diff ${BOLD}--system-diff${NONE} [OPTIONS] file1|string1 file2|string2"
-    echo 
+    echo -e "diff --system-diff file1 file2"
+    echo
 }
 
 
