@@ -1,12 +1,12 @@
 # git-diff-extended
 The *git-diff-extended* script replaces the standard *diff* command with *git diff* to be able to compare strings on the commandine (and not only files). Additionally we make use of the great *diff-highlight* script (https://github.com/git/git/tree/master/contrib/diff-highlight) which improves git diff highlighting to show per character differences.
 
-##Requirements
+## Requirements
 
 - install *git*
 
 
-##Setup
+## Setup
 
 1. cp *git-diff-extended.sh* in a certain directory, e.g. *~/bin*
 
@@ -19,11 +19,11 @@ The *git-diff-extended* script replaces the standard *diff* command with *git di
    ```alias diff=git-diff-extended.sh $1```
 
 
-##To enable per-character diff highlighting we need to do the following:
+## To enable per-character diff highlighting we need to do the following:
 
 1. search the *diff-highlight* script in your git installation. The *diff-highlight* tool is part of *git* distributions but unfortunately its a bit hidden in the installation
 
-   e.g. on *MacOS* its located in */usr/local/Cellar/git/**<git-version>**/share/git-core/contrib/diff-highlight/diff-highlight*
+   e.g. on *MacOS* its located in */usr/local/Cellar/git/**\<git-version\>**/share/git-core/contrib/diff-highlight/diff-highlight*
 
 2. cp *diff-highlight* to *~/bin* (with the small risk that you miss updates on the *diff-highlight* with newer git versions)
 
@@ -40,19 +40,16 @@ The *git-diff-extended* script replaces the standard *diff* command with *git di
 
 ## Usage
 
-### To compate 2 strings
+### To compare 2 strings
 
 ![String compare example](/images/git-diff-extended-example_001.png)
-Format: ![Alt Text](url)
 
 ### The strings may also contain spaces. Just surround them with quotation marks
 
 ![String compare example (with spaces)](/images/git-diff-extended-example_002.png)
-Format: ![Alt Text](url)
 
-### If you run the command without parameters some help is displayed
+### If you run the command without parameters the help is displayed
 
-![String compare example (with spaces)](/images/git-diff-extended-example_003.png)
-Format: ![Alt Text](url)
+![Show help](/images/git-diff-extended-example_003.png)
 
 
