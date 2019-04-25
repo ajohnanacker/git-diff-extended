@@ -147,20 +147,20 @@ else
         case "$input_qualifier" in
         3)  declare -i char_count=$(cat $left_side_file | wc -m)
             declare -i line_count=$(cat $left_side_file | wc -l)
-            echo -e "${PURPLE}Files are identical, each of them having ${line_count} lines and consisting of ${char_count} characters at all."
+            echo -e "${PURPLE}Files are identical, each of them having ${line_count} lines and consisting of ${char_count} characters at all.${NONE}"
         ;;
-        6)  echo -e "${PURPLE}Left side string is identical to right side file content"
+        6)  echo -e "${PURPLE}Left side string is identical to right side file content${NONE}"
         ;;
-        9)  echo -e "${PURPLE}Left side file content is identical to right side string"
+        9)  echo -e "${PURPLE}Left side file content is identical to right side string${NONE}"
         ;;
-        12) echo -e "${PURPLE}Strings are identical"
+        12) echo -e "${PURPLE}Strings are identical${NONE}"
         ;;
-        *) echo -e "${RED}Something went wrong! Got invalid input_qualifier: '${input_qualifier}'"
+        *) echo -e "${RED}Something went wrong! Got invalid input_qualifier: '${input_qualifier}'${NONE}"
         exit -1
         ;;
         esac
     else
-        echo -e "${RED}Differences detected!"
+        echo -e "${RED}Differences detected!${NONE}"
         exit 1
     fi
 fi
