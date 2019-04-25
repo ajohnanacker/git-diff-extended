@@ -25,6 +25,12 @@ The *git-diff-extended* script replaces the standard *diff* command with *git di
 
    e.g. on *MacOS* its located in */usr/local/Cellar/git/**\<git-version\>**/share/git-core/contrib/diff-highlight/diff-highlight*
 
+   search for it by executing: *find -L /usr -name diff-highlight -type f*
+
+   if you can't find it at all you can download it with the following command and move it to ~/bin afterwards:
+
+   ```wget https://raw.githubusercontent.com/git/git/fd99e2bda0ca6a361ef03c04d6d7fdc7a9c40b78/contrib/diff-highlight/diff-highlight && chmod +x diff-highlight```
+
 2. cp *diff-highlight* to *~/bin* (with the small risk that you miss updates on the *diff-highlight* with newer git versions)
 
    alternatively you can create a link, but this means it will not work after git update (because git version is in the path)
