@@ -21,9 +21,9 @@ The *git-diff-extended* script replaces the standard *diff* command with *git di
 
 ## To enable per-character diff highlighting we need to do the following:
 
-1. search the *diff-highlight* script in your git installation. The *diff-highlight* tool is part of *git* distributions but unfortunately its a bit hidden in the installation
+1. search the *diff-highlight* script in your git installation. The *diff-highlight* tool is part of *git* distributions but unfortunately its a bit hidden in the file system,
 
-   e.g. on *MacOS* its located in */usr/local/Cellar/git/**\<git-version\>**/share/git-core/contrib/diff-highlight/diff-highlight*
+   e.g. on *MacOS* it could be located in */opt/homebrew/Cellar/git/**\<git-version\>**/share/git-core/contrib/diff-highlight/* or */usr/local/Cellar/git/**\<git-version\>**/share/git-core/contrib/diff-highlight/diff-highlight*
 
 2. cp *diff-highlight* to *~/bin* (with the small risk that you miss updates on the *diff-highlight* with newer git versions)
 
